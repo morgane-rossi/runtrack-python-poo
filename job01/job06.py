@@ -18,7 +18,6 @@ class Animal :
         self.prenom = prenom
         print(f"L'animal se nomme {self.prenom}")
 
-# Instanciez un objet Animal et affichez en console l’attribut âge
 mon_chien = Animal()
 mon_chien.afficherAge()
 mon_chien.vieillir()

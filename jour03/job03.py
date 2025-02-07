@@ -11,13 +11,13 @@ class ListeDeTaches :
     def __init__(self):
         self.taches = []
 
-    def ajouter_tache(self, tache):
+    def ajouter_tache(self, tache: Tache):
         self.taches.append(tache)
     
-    def supprimer_tache(self, tache):
+    def supprimer_tache(self, tache: Tache):
         self.taches.remove(tache)
     
-    def marquer_comme_finie(self, tache):
+    def marquer_comme_finie(self, tache: Tache):
         for i in range(len(self.taches)):
             if tache.titre == self.taches[i].titre and tache.description == self.taches[i].description :
                 self.taches[i].status = "finie"

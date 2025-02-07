@@ -18,12 +18,13 @@ class Ville :
     def set_nb_habitants(self, nb_habitants):
         self.__nb_habitants = nb_habitants
 
+
 class Personne :
-    def __init__(self, nom, age, Ville):
+    def __init__(self, nom, age, ville :Ville):
         self.__nom = nom
         self.__age = age
-        self.__Ville = Ville
-        self.ajouterPopulation(Ville)
+        self.__ville = ville
+        self.ajouterPopulation(ville)
 
     def get_nom(self):
         return self.__nom
@@ -32,7 +33,7 @@ class Personne :
         return self.__age
     
     def get_Ville(self):
-        self.__Ville = Ville
+        return self.__ville
     
     def set_nom(self, nom):
         self.__nom = nom
@@ -40,11 +41,11 @@ class Personne :
     def set_age(self, age):
         self.__age = age
     
-    def set_Ville(self, Ville):
-        self.__Ville = Ville
+    def set_Ville(self, ville: Ville):
+        self.__ville = ville
     
-    def ajouterPopulation(self, Ville):
-        self.__Ville.set_nb_habitants(Ville.get_nb_habitants() + 1)
+    def ajouterPopulation(self, ville: Ville):
+        self.__ville.set_nb_habitants(Ville.get_nb_habitants() + 1)
         
 
 
